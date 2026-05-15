@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx create-next-app@latest . --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --no-git)",
+      "Bash(mv README.md README.md.bak && npx create-next-app@latest . --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --no-git 2>&1)",
+      "Bash(mv /home/brilworks/Brilworks/brilworks-portfolios/README.md.bak /tmp/)",
+      "Bash(mv /home/brilworks/Brilworks/brilworks-portfolios/.gitignore /tmp/)",
+      "Bash(npx create-next-app@latest /home/brilworks/Brilworks/brilworks-portfolios --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --no-git)",
+      "Bash(npm run *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000)",
+      "WebFetch(domain:chromapro.brilworks.com)",
+      "WebFetch(domain:snapmark.brilworks.com)",
+      "WebFetch(domain:dark.brilworks.com)",
+      "WebFetch(domain:nudge.brilworks.com)",
+      "WebFetch(domain:whatstack.brilworks.com)",
+      "WebFetch(domain:eyerest.brilworks.com)",
+      "WebFetch(domain:invoicify.brilworks.com)",
+      "WebFetch(domain:statementflow.brilworks.com)",
+      "WebFetch(domain:audit.brilworks.com)"
+    ],
+    "additionalDirectories": [
+      "/home/brilworks/Brilworks/brilworks-portfolios"
+    ]
+  }
+}
