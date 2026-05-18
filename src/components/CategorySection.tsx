@@ -9,7 +9,13 @@ interface Props {
   projects: Project[];
 }
 
-export default function CategorySection({ id, label, description, icon, projects }: Props) {
+export default function CategorySection({
+  id,
+  label,
+  description,
+  icon,
+  projects,
+}: Props) {
   if (projects.length === 0) return null;
 
   return (

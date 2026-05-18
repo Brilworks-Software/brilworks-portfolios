@@ -1,10 +1,10 @@
-import { projects } from "@/data/projects";
+import { projects, inCategory } from "@/data/projects";
 import Hero from "@/components/Hero";
 import CategorySection from "@/components/CategorySection";
 
-const webProjects = projects.filter((p) => p.category === "web");
-const extensionProjects = projects.filter((p) => p.category === "extension");
-const mobileProjects = projects.filter((p) => p.category === "mobile");
+const webProjects = projects.filter((p) => inCategory(p, "web"));
+const extensionProjects = projects.filter((p) => inCategory(p, "extension"));
+const mobileProjects = projects.filter((p) => inCategory(p, "mobile"));
 
 export default function Home() {
   return (

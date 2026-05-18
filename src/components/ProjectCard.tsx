@@ -50,14 +50,14 @@ export default function ProjectCard({ project }: { project: Project }) {
       className="group flex flex-col bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-200 overflow-hidden"
     >
       {/* Image */}
-      <div className="w-full aspect-video bg-gray-100 flex items-center justify-center overflow-hidden">
+      <div className="w-full aspect-video bg-white flex items-center justify-center overflow-hidden my-4">
         {imageUrl ? (
           <Image
             src={imageUrl}
             alt={title}
-            width={600}
-            height={338}
-            className="w-full h-full object-cover"
+            width={240}
+            height={240}
+            className="w-fit h-fit object-fill"
           />
         ) : (
           <svg

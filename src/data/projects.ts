@@ -5,10 +5,16 @@ export interface Project {
   title: string;
   subtitle: string;
   description: string;
-  category: Category;
+  category: Category | Category[];
   tags: string[];
   url: string;
   imageUrl?: string;
+}
+
+export function inCategory(project: Project, cat: Category): boolean {
+  return Array.isArray(project.category)
+    ? project.category.includes(cat)
+    : project.category === cat;
 }
 
 export const projects: Project[] = [
@@ -22,6 +28,7 @@ export const projects: Project[] = [
     category: "extension",
     tags: ["Chrome Extension", "Developer Tool"],
     url: "https://whatstack.brilworks.com",
+    imageUrl: "/images/whatstack.png",
   },
   {
     id: "eyerest",
@@ -42,6 +49,7 @@ export const projects: Project[] = [
     category: "extension",
     tags: ["Chrome Extension", "Design Tool"],
     url: "https://chromapro.brilworks.com",
+    imageUrl: "/images/chromapro.png",
   },
   {
     id: "snapmark",
@@ -52,6 +60,7 @@ export const projects: Project[] = [
     category: "extension",
     tags: ["Chrome Extension", "Productivity"],
     url: "https://snapmark.brilworks.com",
+    imageUrl: "/images/snapmark.png",
   },
   {
     id: "dark",
@@ -62,6 +71,7 @@ export const projects: Project[] = [
     category: "extension",
     tags: ["Chrome Extension", "Accessibility"],
     url: "https://dark.brilworks.com",
+    imageUrl: "/images/darkmode.svg",
   },
   {
     id: "nudge",
@@ -72,9 +82,8 @@ export const projects: Project[] = [
     category: "extension",
     tags: ["Chrome Extension", "Productivity"],
     url: "https://nudge.brilworks.com",
-    imageUrl: "/images/nudge-icon.png",
+    imageUrl: "/images/nudge.png",
   },
-
   {
     id: "browsex",
     title: "BrowseX",
@@ -84,6 +93,7 @@ export const projects: Project[] = [
     category: "extension",
     tags: ["Chrome Extension", "AI / ML", "Automation"],
     url: "https://chromewebstore.google.com/detail/browsex-ai-web-automation/giflafbkeahbjpoenblgifmneopecmhn",
+    imageUrl: "/images/browsexai.png",
   },
   {
     id: "cursors",
@@ -94,6 +104,7 @@ export const projects: Project[] = [
     category: "extension",
     tags: ["Chrome Extension", "Customization"],
     url: "https://chromewebstore.google.com/detail/best-custom-cursors-anime/mnbdkjcfgfelpmkbjhdgjmlcjjmpheef",
+    imageUrl: "/images/bestcursors.png",
   },
 
   // ─── Web Apps ─────────────────────────────────────────────────────────────
@@ -129,33 +140,36 @@ export const projects: Project[] = [
   },
   {
     id: "coursesphere",
-    title: "CourseSphere",
+    title: "Course Sphere",
     subtitle: "Full-Stack Online Course Platform",
     description:
       "Role-based platform for students, instructors, and admins. Secure video upload via Cloudinary, course creation tools, enrollment management, and dark/light mode — built with Next.js and Supabase.",
     category: "web",
     tags: ["EdTech", "E-Learning"],
     url: "https://coursesphere.brilworks.com",
+    imageUrl: "/images/coursesphere.webp",
   },
   {
     id: "card",
-    title: "CardDex",
+    title: "Card Dex",
     subtitle: "Scan QR Codes. Collect Digital Cards.",
     description:
       "Scan a QR code on a physical card to unlock its animated digital version in your personal binder. Admins generate AI reveal videos via Google Veo directly from the card image.",
     category: "mobile",
     tags: ["iOS", "Android", "AI / ML"],
     url: "https://card.brilworks.com",
+    imageUrl: "/images/carddex.png",
   },
   {
     id: "order",
-    title: "OrderFlow",
+    title: "Order Flow",
     subtitle: "Premium Order Management System",
     description:
       "End-to-end order lifecycle management with role-based access for admin, manager, and staff. Real-time order tracking, status updates, and reporting in one dashboard.",
     category: "web",
     tags: ["E-Commerce", "Operations"],
     url: "https://order.brilworks.com",
+    imageUrl: "/images/orderflow.png",
   },
   {
     id: "admission",
@@ -196,26 +210,29 @@ export const projects: Project[] = [
     category: "web",
     tags: ["Manufacturing", "ERP", "SaaS"],
     url: "https://aster-lite-os.vercel.app",
+    imageUrl: "/images/asterlite.png",
   },
   {
     id: "garagemap",
-    title: "GarageMap",
+    title: "Garage Map",
     subtitle: "Comprehensive Garage & Workshop Management",
     description:
       "Built with Next.js and Firebase — manage customers, vehicles, job cards, invoices, inventory, and finances in one platform. Includes audit logs, reminders, and financial reports for service centers.",
     category: "web",
     tags: ["Automotive", "SaaS"],
     url: "https://garagemap.brilworks.com",
+    imageUrl: "/images/garagemap_os.webp",
   },
   {
     id: "vectortrace",
-    title: "VectorTrace",
+    title: "Vector Trace",
     subtitle: "Vector Conversion Tool",
     description:
       "Convert raster images into clean, scalable vector graphics with intelligent tracing algorithms. Perfect for logos, icons, and artwork that need to scale without quality loss.",
     category: "web",
     tags: ["Design Tool", "Image Processing"],
     url: "https://vectortrace.brilworks.com",
+    imageUrl: "/images/vectortrace.webp",
   },
   {
     id: "hrtech",
@@ -226,6 +243,7 @@ export const projects: Project[] = [
     category: "web",
     tags: ["AI / ML", "HR Tech"],
     url: "https://hrtech.brilworks.com",
+    imageUrl: "/images/hrtech.png",
   },
   {
     id: "realestate",
@@ -239,17 +257,18 @@ export const projects: Project[] = [
   },
   {
     id: "restaurant",
-    title: "OrderNest",
+    title: "Order Nest",
     subtitle: "Restaurant Management Platform",
     description:
       "Manage your restaurant's complete operations — menus, orders, tables, and staff — from a single intuitive interface designed for fast-paced food service environments.",
     category: "web",
     tags: ["F&B", "Operations"],
     url: "https://restaurant.brilworks.com",
+    imageUrl: "/images/ordernest.webp",
   },
   {
     id: "lifeai",
-    title: "LifeAI",
+    title: "Life AI",
     subtitle: "AI Life Assistant",
     description:
       "A personal AI companion that helps you organize goals, build habits, and make smarter daily decisions — combining planning, journaling, and intelligent coaching in one place.",
@@ -260,24 +279,257 @@ export const projects: Project[] = [
 
   // ─── Mobile Apps ──────────────────────────────────────────────────────────
   {
-    id: "circle",
-    title: "Circle Up",
-    subtitle: "Community & Social Platform",
+    id: "petfinder",
+    title: "Pet-Finder",
+    subtitle: "Find Your Perfect Pet Companion",
     description:
-      "A mobile-first community platform that brings people together around shared interests. Create circles, post updates, and engage with your community on iOS and Android.",
+      "Browse thousands of adoptable pet listings near you, filter by breed, age, and location, and connect directly with shelters or owners to help reunite lost animals with their families.",
+    category: "mobile",
+    tags: ["iOS", "Android", "Lifestyle"],
+    url: "https://play.google.com/store/apps/details?id=com.brilworks.petfinder",
+    imageUrl: "/images/petfinder.webp",
+  },
+  {
+    id: "docchat",
+    title: "Doctor Chat",
+    subtitle: "Secure Doctor-Patient Communication",
+    description:
+      "Connect patients and doctors with real-time messaging, appointment workflows, and in-app video calling — a simple, secure all-in-one healthcare communication platform.",
+    category: "mobile",
+    tags: ["iOS", "Android", "Health Tech"],
+    url: "https://play.google.com/store/apps/details?id=com.brilworksdigital.docchat",
+    imageUrl: "/images/docchat.webp",
+  },
+  {
+    id: "kinderland",
+    title: "Kinderland",
+    subtitle: "Learn 123 & ABC — Kids Education",
+    description:
+      "Unlock a world of fun and learning with tracing, connecting, and interactive exercises. Kinderland combines education and entertainment to make every moment a learning adventure for young minds.",
+    category: "mobile",
+    tags: ["iOS", "Android", "EdTech"],
+    url: "https://play.google.com/store/apps/details?id=com.brilworks.games.kinderland",
+    imageUrl: "/images/kinderland.webp",
+  },
+  {
+    id: "colorcommand",
+    title: "Color Command",
+    subtitle: "Brain Training Stroop Effect Game",
+    description:
+      "Master your reflexes with the ultimate Stroop Effect brain training game — where the color of text and its meaning conflict to challenge your mental agility and reaction speed.",
+    category: ["web", "mobile"],
+    tags: ["Web App", "iOS", "Android", "Gaming"],
+    url: "https://play.google.com/store/apps/details?id=com.brilworks.colorcommand",
+    imageUrl: "/images/colorcommand.png",
+  },
+  {
+    id: "elara",
+    title: "Elara",
+    subtitle: "Pregnancy & Maternal Wellness Tracker",
+    description:
+      "A personalized maternal wellness companion with expert-curated prenatal and postnatal content, baby growth tracking, yoga, meditation, and mindful practices for every stage of pregnancy.",
+    category: "mobile",
+    tags: ["iOS", "Android", "Health & Wellness"],
+    url: "https://play.google.com/store/apps/details?id=com.brilworksdigital.Elara",
+    imageUrl: "/images/Elara.webp",
+  },
+  {
+    id: "cabunorider",
+    title: "Cabuno-Rider",
+    subtitle: "Driver App — Accept Rides & Track Earnings",
+    description:
+      "The all-in-one driver app for going online, accepting nearby ride requests, navigating in real time, and tracking daily earnings — all from one clean dashboard.",
+    category: "mobile",
+    tags: ["iOS", "Android", "Transportation"],
+    url: "https://play.google.com/store/apps/details?id=com.brilworks.cabunorider",
+    imageUrl: "/images/cabunorider.webp",
+  },
+  {
+    id: "spinerecoverypro",
+    title: "Spine Recovery Pro",
+    subtitle: "Clinically Guided Spine Rehabilitation",
+    description:
+      "Personalized spine rehabilitation with clinical exercise plans, progress tracking, and compliance monitoring — bridging patients and healthcare professionals for measurable recovery outcomes.",
+    category: "mobile",
+    tags: ["iOS", "Android", "Health & Wellness"],
+    url: "https://play.google.com/store/apps/details?id=com.brilworksdigital.spinerecoverypro",
+    imageUrl: "/images/spinerecoverypro.webp",
+  },
+  {
+    id: "mrbrush",
+    title: "Mr. Brush",
+    subtitle: "AI-Powered Image Generator",
+    description:
+      "Transform your imagination into stunning visual art using advanced AI with custom styles and text prompts — a cutting-edge mobile creative studio powered by generative AI.",
+    category: "mobile",
+    tags: ["iOS", "Android", "AI / ML"],
+    url: "https://play.google.com/store/apps/details?id=com.brilworksdigital.Mrbrush",
+    imageUrl: "/images/mrbrush.webp",
+  },
+  {
+    id: "lifepilot",
+    title: "LifePilot AI",
+    subtitle: "AI Assistant for Health, Finance & Life",
+    description:
+      "A personal AI assistant providing intelligent guidance across health, finance, and productivity — structured assistant categories that help you make smarter decisions every day.",
+    category: "mobile",
+    tags: ["iOS", "Android", "AI / ML", "Lifestyle"],
+    url: "https://play.google.com/store/apps/details?id=com.brilworks.lifePilot",
+    imageUrl: "/images/lifepilot.webp",
+  },
+  {
+    id: "kindcircle",
+    title: "Kind Circle",
+    subtitle: "Support Network for Neurodivergent Families",
+    description:
+      "A dedicated community platform connecting parents raising children with autism, ADHD, and other neurodivergent conditions — share experiences, find support, and access expert resources.",
     category: "mobile",
     tags: ["iOS", "Android", "Social"],
-    url: "https://circle.brilworks.com",
+    url: "https://play.google.com/store/apps/details?id=com.brilworksdigital.KindCircle",
+    imageUrl: "/images/kindcircle.webp",
+  },
+  {
+    id: "ordernest-mobile",
+    title: "Order Nest",
+    subtitle: "Restaurant Orders — Mobile App",
+    description:
+      "The mobile companion for restaurant teams — design menus, configure tables, invite staff, and track real-time orders, sales, and billing from anywhere.",
+    category: "mobile",
+    tags: ["iOS", "Android", "F&B"],
+    url: "https://play.google.com/store/apps/details?id=com.brilworks.orderNest",
+    imageUrl: "/images/ordernest.webp",
+  },
+  {
+    id: "vectortrace-mobile",
+    title: "Vector Trace",
+    subtitle: "Business Management & Order Tracking",
+    description:
+      "An all-in-one management solution for manufacturers, service providers, vendors, and customers — streamline orders, inventory, technicians, and delivery with real-time tracking.",
+    category: "mobile",
+    tags: ["iOS", "Android", "Operations"],
+    url: "https://play.google.com/store/apps/details?id=com.brilworks.vectortrace",
+    imageUrl: "/images/vectortrace.webp",
+  },
+  {
+    id: "servicesquad",
+    title: "Service Squad",
+    subtitle: "Book Trusted Home Service Professionals",
+    description:
+      "Connects customers, providers, and admins in one platform for seamless home service bookings — book trusted professionals, manage your work, or oversee the marketplace.",
+    category: "mobile",
+    tags: ["iOS", "Android", "Marketplace"],
+    url: "https://play.google.com/store/apps/details?id=com.brilworks.servicesquad",
+    imageUrl: "/images/servicesquad.webp",
+  },
+  {
+    id: "pinksignal",
+    title: "Pink Signal",
+    subtitle: "Women Safety & Family Alert App",
+    description:
+      "A women's safety and family tracking app that keeps you connected with trusted contacts at all times — whether commuting or walking alone, help is always one tap away.",
+    category: "mobile",
+    tags: ["iOS", "Android", "Safety"],
+    url: "https://play.google.com/store/apps/details?id=com.brilworksdigital.pinksignal",
+    imageUrl: "/images/pinksignal.webp",
+  },
+  {
+    id: "fitorbit",
+    title: "Fit Orbit",
+    subtitle: "Fitness Tracker & Workout Planner",
+    description:
+      "Your ultimate fitness companion to plan, track, and achieve goals — build workout routines for weights, bodyweight training, or beginner workouts and monitor every rep of your progress.",
+    category: "mobile",
+    tags: ["iOS", "Android", "Health & Wellness"],
+    url: "https://play.google.com/store/apps/details?id=com.brilworks.fitorbit",
+    imageUrl: "/images/fitorbit.webp",
+  },
+  {
+    id: "circleup",
+    title: "Circle Up",
+    subtitle: "Personal Relationship Management",
+    description:
+      "Create and manage meaningful relationships with your contacts — track notes and interactions to stay genuinely close to the people who matter most in your life.",
+    category: "mobile",
+    tags: ["iOS", "Android", "Productivity"],
+    url: "https://play.google.com/store/apps/details?id=com.brilworks.circleUp",
+    imageUrl: "/images/circleup.webp",
+  },
+  {
+    id: "heartmesh",
+    title: "Heart Mesh",
+    subtitle: "AI Dating — Practice, Then Connect",
+    description:
+      "The world's first dating platform combining human connections with AI companionship — practice conversations with AI companions, then confidently connect with real matches via video calls.",
+    category: "mobile",
+    tags: ["iOS", "Android", "Social", "AI / ML"],
+    url: "https://play.google.com/store/apps/details?id=com.brilworks.mindsync",
+    imageUrl: "/images/heartmesh.webp",
+  },
+  {
+    id: "exora",
+    title: "Exora",
+    subtitle: "Physical Therapy & Patient Recovery",
+    description:
+      "Transforms physical therapy by connecting patients, nurses, and clinics — personalized treatment plans, real-time progress tracking, and seamless communication for better recovery outcomes.",
+    category: "mobile",
+    tags: ["iOS", "Android", "Health Tech"],
+    url: "https://play.google.com/store/apps/details?id=com.brilworksdigital.exora",
+    imageUrl: "/images/exora.webp",
+  },
+  {
+    id: "enclaveconnect",
+    title: "Enclave Connect",
+    subtitle: "Smart Gated Community Management",
+    description:
+      "All-in-one community management for gated societies — whether you're a resident, security guard, or management committee member, everything stays connected and efficient.",
+    category: "mobile",
+    tags: ["iOS", "Android", "PropTech"],
+    url: "https://play.google.com/store/apps/details?id=com.brilworksdigital.enclaveconnect",
+    imageUrl: "/images/enclaveconnect.webp",
+  },
+  {
+    id: "expenseflow",
+    title: "Expense Flow",
+    subtitle: "Smart Expense Tracker & Budget Manager",
+    description:
+      "An all-in-one expense tracker with intuitive categorization, visual spending insights, and smart money management tools to help you master your finances effortlessly.",
+    category: "mobile",
+    tags: ["iOS", "Android", "FinTech"],
+    url: "https://play.google.com/store/apps/details?id=com.brilworks.expenifyapp",
+    imageUrl: "/images/expenseflow.webp",
+  },
+  {
+    id: "habitrise",
+    title: "Habit Rise",
+    subtitle: "Build Habits with Reminders & Insights",
+    description:
+      "Your ultimate habit-building companion — create and maintain positive habits with smart reminders, a habit calendar, and progress insights that make building consistency enjoyable.",
+    category: "mobile",
+    tags: ["iOS", "Android", "Lifestyle"],
+    url: "https://play.google.com/store/apps/details?id=com.brilworks.habittracker",
+    imageUrl: "/images/habitrise.webp",
+  },
+  {
+    id: "healthvault",
+    title: "Health Vault",
+    subtitle: "Secure Family Medical Records Storage",
+    description:
+      "The ultimate solution for organizing your family's health documents securely — upload records from camera or gallery and keep a centralized health record for every family member.",
+    category: "mobile",
+    tags: ["iOS", "Android", "Health Tech"],
+    url: "https://play.google.com/store/apps/details?id=com.brilworks.healthvault",
+    imageUrl: "/images/healthvault.webp",
   },
   {
     id: "scaneat",
-    title: "ScanEat",
+    title: "Scan Eat",
     subtitle: "Food Barcode Scanner & Health Analyzer",
     description:
       "Scan a barcode to get an instant Nutri-Score, ingredient breakdown, allergen warnings, and personalized health recommendations. Cross-platform — Next.js web app and React Native mobile app powered by OpenFoodFacts.",
     category: "mobile",
     tags: ["iOS", "Android", "Health", "React Native"],
     url: "https://scaneat.brilworks.com",
+    imageUrl: "/images/scaneat.webp",
   },
 ];
 
