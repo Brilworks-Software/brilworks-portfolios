@@ -39,6 +39,7 @@ export const projects: Project[] = [
     category: "extension",
     tags: ["Chrome Extension", "Health & Wellness"],
     url: "https://eyerest.brilworks.com",
+    imageUrl: "/images/eyerest.png",
   },
   {
     id: "chromapro",
@@ -71,7 +72,7 @@ export const projects: Project[] = [
     category: "extension",
     tags: ["Chrome Extension", "Accessibility"],
     url: "https://dark.brilworks.com",
-    imageUrl: "/images/darkmode.svg",
+    imageUrl: "/images/darkmode.png",
   },
   {
     id: "nudge",
@@ -117,6 +118,7 @@ export const projects: Project[] = [
     category: "web",
     tags: ["AI / ML", "FinTech"],
     url: "https://invoicify.brilworks.com",
+    imageUrl: "/images/invoicify.png",
   },
   {
     id: "statementflow",
@@ -127,6 +129,7 @@ export const projects: Project[] = [
     category: "web",
     tags: ["AI / ML", "FinTech"],
     url: "https://statementflow.brilworks.com",
+    imageUrl: "/images/statementflow.png",
   },
   {
     id: "audit",
@@ -137,6 +140,7 @@ export const projects: Project[] = [
     category: "web",
     tags: ["AI / ML", "Finance", "Compliance"],
     url: "https://audit.brilworks.com",
+    imageUrl: "/images/ai-audit.png",
   },
   {
     id: "coursesphere",
@@ -147,18 +151,7 @@ export const projects: Project[] = [
     category: "web",
     tags: ["EdTech", "E-Learning"],
     url: "https://coursesphere.brilworks.com",
-    imageUrl: "/images/coursesphere.webp",
-  },
-  {
-    id: "card",
-    title: "Card Dex",
-    subtitle: "Scan QR Codes. Collect Digital Cards.",
-    description:
-      "Scan a QR code on a physical card to unlock its animated digital version in your personal binder. Admins generate AI reveal videos via Google Veo directly from the card image.",
-    category: "mobile",
-    tags: ["iOS", "Android", "AI / ML"],
-    url: "https://card.brilworks.com",
-    imageUrl: "/images/carddex.png",
+    imageUrl: "/images/coursesphere.png",
   },
   {
     id: "order",
@@ -180,6 +173,7 @@ export const projects: Project[] = [
     category: "web",
     tags: ["AI / ML", "EdTech"],
     url: "https://admission.brilworks.com",
+    imageUrl: "/images/admission.png",
   },
   {
     id: "roomplanner",
@@ -190,6 +184,7 @@ export const projects: Project[] = [
     category: "web",
     tags: ["3D / AR", "AI / ML", "Interior Design"],
     url: "https://roomplanner.brilworks.com",
+    imageUrl: "/images/roomplanner.png",
   },
   {
     id: "voice",
@@ -200,6 +195,7 @@ export const projects: Project[] = [
     category: "web",
     tags: ["AI / ML", "Voice AI"],
     url: "https://voice.brilworks.com",
+    imageUrl: "/images/voiceagents.png",
   },
   {
     id: "aster",
@@ -221,7 +217,7 @@ export const projects: Project[] = [
     category: "web",
     tags: ["Automotive", "SaaS"],
     url: "https://garagemap.brilworks.com",
-    imageUrl: "/images/garagemap_os.webp",
+    imageUrl: "/images/garagemap.png",
   },
   {
     id: "vectortrace",
@@ -254,6 +250,7 @@ export const projects: Project[] = [
     category: "web",
     tags: ["AI / ML", "Real Estate"],
     url: "https://realestate.brilworks.com",
+    imageUrl: "/images/constructAI.png",
   },
   {
     id: "restaurant",
@@ -275,9 +272,21 @@ export const projects: Project[] = [
     category: "web",
     tags: ["AI / ML", "Lifestyle"],
     url: "https://lifeai.brilworks.com",
+    imageUrl: "/images/lifeai.png",
   },
 
   // ─── Mobile Apps ──────────────────────────────────────────────────────────
+  {
+    id: "card",
+    title: "Card Dex",
+    subtitle: "Scan QR Codes. Collect Digital Cards.",
+    description:
+      "Scan a QR code on a physical card to unlock its animated digital version in your personal binder. Admins generate AI reveal videos via Google Veo directly from the card image.",
+    category: "mobile",
+    tags: ["iOS", "Android", "AI / ML"],
+    url: "https://card.brilworks.com",
+    imageUrl: "/images/carddex.png",
+  },
   {
     id: "petfinder",
     title: "Pet-Finder",
