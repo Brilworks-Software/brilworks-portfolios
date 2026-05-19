@@ -9,6 +9,8 @@ export interface Project {
   tags: string[];
   url: string;
   imageUrl?: string;
+  iosUrl?: string;
+  androidUrl?: string;
 }
 
 export function inCategory(project: Project, cat: Category): boolean {
@@ -276,17 +278,7 @@ export const projects: Project[] = [
   },
 
   // ─── Mobile Apps ──────────────────────────────────────────────────────────
-  {
-    id: "card",
-    title: "Card Dex",
-    subtitle: "Scan QR Codes. Collect Digital Cards.",
-    description:
-      "Scan a QR code on a physical card to unlock its animated digital version in your personal binder. Admins generate AI reveal videos via Google Veo directly from the card image.",
-    category: "mobile",
-    tags: ["iOS", "Android", "AI / ML"],
-    url: "https://card.brilworks.com",
-    imageUrl: "/images/carddex.png",
-  },
+
   {
     id: "petfinder",
     title: "Pet-Finder",
@@ -297,6 +289,9 @@ export const projects: Project[] = [
     tags: ["iOS", "Android", "Lifestyle"],
     url: "https://play.google.com/store/apps/details?id=com.brilworks.petfinder",
     imageUrl: "/images/petfinder.webp",
+    iosUrl: "https://apps.apple.com/in/app/pet-finder/id6754903257",
+    androidUrl:
+      "https://play.google.com/store/apps/details?id=com.brilworks.petfinder",
   },
   {
     id: "docchat",
@@ -308,6 +303,9 @@ export const projects: Project[] = [
     tags: ["iOS", "Android", "Health Tech"],
     url: "https://play.google.com/store/apps/details?id=com.brilworksdigital.docchat",
     imageUrl: "/images/docchat.webp",
+    iosUrl: "https://apps.apple.com/in/app/doctor-chat/id6762255825",
+    androidUrl:
+      "https://play.google.com/store/apps/details?id=com.brilworksdigital.docchat",
   },
   {
     id: "kinderland",
@@ -319,6 +317,10 @@ export const projects: Project[] = [
     tags: ["iOS", "Android", "EdTech"],
     url: "https://play.google.com/store/apps/details?id=com.brilworks.games.kinderland",
     imageUrl: "/images/kinderland.webp",
+    iosUrl:
+      "https://apps.apple.com/in/app/kinderland-learn-123-abc/id6452722323",
+    androidUrl:
+      "https://play.google.com/store/apps/details?id=com.brilworks.games.kinderland",
   },
   {
     id: "colorcommand",
@@ -330,6 +332,10 @@ export const projects: Project[] = [
     tags: ["Web App", "iOS", "Android", "Gaming"],
     url: "https://play.google.com/store/apps/details?id=com.brilworks.colorcommand",
     imageUrl: "/images/colorcommand.png",
+    iosUrl:
+      "https://apps.apple.com/in/app/color-command-brain-training/id6767218237",
+    androidUrl:
+      "https://play.google.com/store/apps/details?id=com.brilworks.colorcommand",
   },
   {
     id: "elara",
@@ -341,6 +347,9 @@ export const projects: Project[] = [
     tags: ["iOS", "Android", "Health & Wellness"],
     url: "https://play.google.com/store/apps/details?id=com.brilworksdigital.Elara",
     imageUrl: "/images/Elara.webp",
+    iosUrl: "https://apps.apple.com/in/app/elara-prenatal-app/id6760452596",
+    androidUrl:
+      "https://play.google.com/store/apps/details?id=com.brilworksdigital.Elara",
   },
   {
     id: "cabunorider",
@@ -352,6 +361,9 @@ export const projects: Project[] = [
     tags: ["iOS", "Android", "Transportation"],
     url: "https://play.google.com/store/apps/details?id=com.brilworks.cabunorider",
     imageUrl: "/images/cabunorider.webp",
+    iosUrl: "https://apps.apple.com/in/app/cabuno-rider/id6759718805",
+    androidUrl:
+      "https://play.google.com/store/apps/details?id=com.brilworks.cabunorider",
   },
   {
     id: "spinerecoverypro",
@@ -363,6 +375,8 @@ export const projects: Project[] = [
     tags: ["iOS", "Android", "Health & Wellness"],
     url: "https://play.google.com/store/apps/details?id=com.brilworksdigital.spinerecoverypro",
     imageUrl: "/images/spinerecoverypro.webp",
+    androidUrl:
+      "https://play.google.com/store/apps/details?id=com.brilworksdigital.spinerecoverypro",
   },
   {
     id: "mrbrush",
@@ -374,6 +388,8 @@ export const projects: Project[] = [
     tags: ["iOS", "Android", "AI / ML"],
     url: "https://play.google.com/store/apps/details?id=com.brilworksdigital.Mrbrush",
     imageUrl: "/images/mrbrush.webp",
+    androidUrl:
+      "https://play.google.com/store/apps/details?id=com.brilworksdigital.Mrbrush",
   },
   {
     id: "lifepilot",
@@ -385,6 +401,8 @@ export const projects: Project[] = [
     tags: ["iOS", "Android", "AI / ML", "Lifestyle"],
     url: "https://play.google.com/store/apps/details?id=com.brilworks.lifePilot",
     imageUrl: "/images/lifepilot.webp",
+    androidUrl:
+      "https://play.google.com/store/apps/details?id=com.brilworks.lifePilot",
   },
   {
     id: "kindcircle",
@@ -396,6 +414,8 @@ export const projects: Project[] = [
     tags: ["iOS", "Android", "Social"],
     url: "https://play.google.com/store/apps/details?id=com.brilworksdigital.KindCircle",
     imageUrl: "/images/kindcircle.webp",
+    androidUrl:
+      "https://play.google.com/store/apps/details?id=com.brilworksdigital.KindCircle",
   },
   {
     id: "ordernest-mobile",
@@ -407,6 +427,9 @@ export const projects: Project[] = [
     tags: ["iOS", "Android", "F&B"],
     url: "https://play.google.com/store/apps/details?id=com.brilworks.orderNest",
     imageUrl: "/images/ordernest.webp",
+    iosUrl: "https://apps.apple.com/in/app/ordernest/id6755948557",
+    androidUrl:
+      "https://play.google.com/store/apps/details?id=com.brilworks.orderNest",
   },
   {
     id: "vectortrace-mobile",
@@ -418,6 +441,9 @@ export const projects: Project[] = [
     tags: ["iOS", "Android", "Operations"],
     url: "https://play.google.com/store/apps/details?id=com.brilworks.vectortrace",
     imageUrl: "/images/vectortrace.webp",
+    iosUrl: "https://apps.apple.com/in/app/vectortrace/id6756480875",
+    androidUrl:
+      "https://play.google.com/store/apps/details?id=com.brilworks.vectortrace",
   },
   {
     id: "servicesquad",
@@ -429,6 +455,10 @@ export const projects: Project[] = [
     tags: ["iOS", "Android", "Marketplace"],
     url: "https://play.google.com/store/apps/details?id=com.brilworks.servicesquad",
     imageUrl: "/images/servicesquad.webp",
+    iosUrl:
+      "https://apps.apple.com/in/app/service-squad-home-services/id6755956890",
+    androidUrl:
+      "https://play.google.com/store/apps/details?id=com.brilworks.servicesquad",
   },
   {
     id: "pinksignal",
@@ -440,6 +470,10 @@ export const projects: Project[] = [
     tags: ["iOS", "Android", "Safety"],
     url: "https://play.google.com/store/apps/details?id=com.brilworksdigital.pinksignal",
     imageUrl: "/images/pinksignal.webp",
+    iosUrl:
+      "https://apps.apple.com/in/app/pinksignal-women-safety-app/id6754561696",
+    androidUrl:
+      "https://play.google.com/store/apps/details?id=com.brilworksdigital.pinksignal",
   },
   {
     id: "fitorbit",
@@ -451,6 +485,8 @@ export const projects: Project[] = [
     tags: ["iOS", "Android", "Health & Wellness"],
     url: "https://play.google.com/store/apps/details?id=com.brilworks.fitorbit",
     imageUrl: "/images/fitorbit.webp",
+    androidUrl:
+      "https://play.google.com/store/apps/details?id=com.brilworks.fitorbit",
   },
   {
     id: "circleup",
@@ -462,6 +498,9 @@ export const projects: Project[] = [
     tags: ["iOS", "Android", "Productivity"],
     url: "https://play.google.com/store/apps/details?id=com.brilworks.circleUp",
     imageUrl: "/images/circleup.webp",
+    iosUrl: "https://apps.apple.com/in/app/circle-up/id6753784281",
+    androidUrl:
+      "https://play.google.com/store/apps/details?id=com.brilworks.circleUp",
   },
   {
     id: "heartmesh",
@@ -473,6 +512,8 @@ export const projects: Project[] = [
     tags: ["iOS", "Android", "Social", "AI / ML"],
     url: "https://play.google.com/store/apps/details?id=com.brilworks.mindsync",
     imageUrl: "/images/heartmesh.webp",
+    androidUrl:
+      "https://play.google.com/store/apps/details?id=com.brilworks.mindsync",
   },
   {
     id: "exora",
@@ -484,6 +525,8 @@ export const projects: Project[] = [
     tags: ["iOS", "Android", "Health Tech"],
     url: "https://play.google.com/store/apps/details?id=com.brilworksdigital.exora",
     imageUrl: "/images/exora.webp",
+    androidUrl:
+      "https://play.google.com/store/apps/details?id=com.brilworksdigital.exora",
   },
   {
     id: "enclaveconnect",
@@ -495,6 +538,9 @@ export const projects: Project[] = [
     tags: ["iOS", "Android", "PropTech"],
     url: "https://play.google.com/store/apps/details?id=com.brilworksdigital.enclaveconnect",
     imageUrl: "/images/enclaveconnect.webp",
+    iosUrl: "https://apps.apple.com/us/app/enclave-connect/id6753797049",
+    androidUrl:
+      "https://play.google.com/store/apps/details?id=com.brilworksdigital.enclaveconnect",
   },
   {
     id: "expenseflow",
@@ -506,6 +552,8 @@ export const projects: Project[] = [
     tags: ["iOS", "Android", "FinTech"],
     url: "https://play.google.com/store/apps/details?id=com.brilworks.expenifyapp",
     imageUrl: "/images/expenseflow.webp",
+    androidUrl:
+      "https://play.google.com/store/apps/details?id=com.brilworks.expenifyapp",
   },
   {
     id: "habitrise",
@@ -517,6 +565,8 @@ export const projects: Project[] = [
     tags: ["iOS", "Android", "Lifestyle"],
     url: "https://play.google.com/store/apps/details?id=com.brilworks.habittracker",
     imageUrl: "/images/habitrise.webp",
+    androidUrl:
+      "https://play.google.com/store/apps/details?id=com.brilworks.habittracker",
   },
   {
     id: "healthvault",
@@ -528,6 +578,8 @@ export const projects: Project[] = [
     tags: ["iOS", "Android", "Health Tech"],
     url: "https://play.google.com/store/apps/details?id=com.brilworks.healthvault",
     imageUrl: "/images/healthvault.webp",
+    androidUrl:
+      "https://play.google.com/store/apps/details?id=com.brilworks.healthvault",
   },
   {
     id: "scaneat",
@@ -539,6 +591,9 @@ export const projects: Project[] = [
     tags: ["iOS", "Android", "Health", "React Native"],
     url: "https://scaneat.brilworks.com",
     imageUrl: "/images/scaneat.webp",
+    iosUrl: "https://apps.apple.com/in/app/scan-eat-scan-product/id6757597631",
+    androidUrl:
+      "https://play.google.com/store/apps/details?id=com.brilworks.scaneat",
   },
 ];
 
