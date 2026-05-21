@@ -31,8 +31,8 @@ const tagColors: Record<string, string> = {
   "Real Estate": "bg-lime-50 text-lime-700",
   "F&B": "bg-orange-50 text-orange-700",
   Lifestyle: "bg-fuchsia-50 text-fuchsia-700",
-  iOS: "bg-gray-100 text-gray-700",
-  Android: "bg-green-50 text-green-700",
+  iOS: "bg-blue-100 text-blue-700",
+  Android: "bg-green-100 text-green-800",
   Social: "bg-blue-50 text-blue-700",
   Health: "bg-green-50 text-green-700",
 };

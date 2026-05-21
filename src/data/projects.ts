@@ -372,7 +372,7 @@ export const projects: Project[] = [
     description:
       "Personalized spine rehabilitation with clinical exercise plans, progress tracking, and compliance monitoring — bridging patients and healthcare professionals for measurable recovery outcomes.",
     category: "mobile",
-    tags: ["iOS", "Android", "Health & Wellness"],
+    tags: ["Android", "Health & Wellness"],
     url: "https://play.google.com/store/apps/details?id=com.brilworksdigital.spinerecoverypro",
     imageUrl: "/images/spinerecoverypro.webp",
     androidUrl:
@@ -385,7 +385,7 @@ export const projects: Project[] = [
     description:
       "Transform your imagination into stunning visual art using advanced AI with custom styles and text prompts — a cutting-edge mobile creative studio powered by generative AI.",
     category: "mobile",
-    tags: ["iOS", "Android", "AI / ML"],
+    tags: ["Android", "AI / ML"],
     url: "https://play.google.com/store/apps/details?id=com.brilworksdigital.Mrbrush",
     imageUrl: "/images/mrbrush.webp",
     androidUrl:
@@ -398,7 +398,7 @@ export const projects: Project[] = [
     description:
       "A personal AI assistant providing intelligent guidance across health, finance, and productivity — structured assistant categories that help you make smarter decisions every day.",
     category: "mobile",
-    tags: ["iOS", "Android", "AI / ML", "Lifestyle"],
+    tags: ["Android", "AI / ML", "Lifestyle"],
     url: "https://play.google.com/store/apps/details?id=com.brilworks.lifePilot",
     imageUrl: "/images/lifepilot.webp",
     androidUrl:
@@ -411,7 +411,7 @@ export const projects: Project[] = [
     description:
       "A dedicated community platform connecting parents raising children with autism, ADHD, and other neurodivergent conditions — share experiences, find support, and access expert resources.",
     category: "mobile",
-    tags: ["iOS", "Android", "Social"],
+    tags: ["Android", "Social"],
     url: "https://play.google.com/store/apps/details?id=com.brilworksdigital.KindCircle",
     imageUrl: "/images/kindcircle.webp",
     androidUrl:
@@ -482,7 +482,7 @@ export const projects: Project[] = [
     description:
       "Your ultimate fitness companion to plan, track, and achieve goals — build workout routines for weights, bodyweight training, or beginner workouts and monitor every rep of your progress.",
     category: "mobile",
-    tags: ["iOS", "Android", "Health & Wellness"],
+    tags: ["Android", "Health & Wellness"],
     url: "https://play.google.com/store/apps/details?id=com.brilworks.fitorbit",
     imageUrl: "/images/fitorbit.webp",
     androidUrl:
@@ -509,7 +509,7 @@ export const projects: Project[] = [
     description:
       "The world's first dating platform combining human connections with AI companionship — practice conversations with AI companions, then confidently connect with real matches via video calls.",
     category: "mobile",
-    tags: ["iOS", "Android", "Social", "AI / ML"],
+    tags: ["Android", "Social", "AI / ML"],
     url: "https://play.google.com/store/apps/details?id=com.brilworks.mindsync",
     imageUrl: "/images/heartmesh.webp",
     androidUrl:
@@ -522,7 +522,7 @@ export const projects: Project[] = [
     description:
       "Transforms physical therapy by connecting patients, nurses, and clinics — personalized treatment plans, real-time progress tracking, and seamless communication for better recovery outcomes.",
     category: "mobile",
-    tags: ["iOS", "Android", "Health Tech"],
+    tags: ["Android", "Health Tech"],
     url: "https://play.google.com/store/apps/details?id=com.brilworksdigital.exora",
     imageUrl: "/images/exora.webp",
     androidUrl:
@@ -549,7 +549,7 @@ export const projects: Project[] = [
     description:
       "An all-in-one expense tracker with intuitive categorization, visual spending insights, and smart money management tools to help you master your finances effortlessly.",
     category: "mobile",
-    tags: ["iOS", "Android", "FinTech"],
+    tags: ["Android", "FinTech"],
     url: "https://play.google.com/store/apps/details?id=com.brilworks.expenifyapp",
     imageUrl: "/images/expenseflow.webp",
     androidUrl:
@@ -562,7 +562,7 @@ export const projects: Project[] = [
     description:
       "Your ultimate habit-building companion — create and maintain positive habits with smart reminders, a habit calendar, and progress insights that make building consistency enjoyable.",
     category: "mobile",
-    tags: ["iOS", "Android", "Lifestyle"],
+    tags: ["Android", "Lifestyle"],
     url: "https://play.google.com/store/apps/details?id=com.brilworks.habittracker",
     imageUrl: "/images/habitrise.webp",
     androidUrl:
@@ -575,7 +575,7 @@ export const projects: Project[] = [
     description:
       "The ultimate solution for organizing your family's health documents securely — upload records from camera or gallery and keep a centralized health record for every family member.",
     category: "mobile",
-    tags: ["iOS", "Android", "Health Tech"],
+    tags: ["Android", "Health Tech"],
     url: "https://play.google.com/store/apps/details?id=com.brilworks.healthvault",
     imageUrl: "/images/healthvault.webp",
     androidUrl:
