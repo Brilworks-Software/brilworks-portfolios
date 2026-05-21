@@ -330,7 +330,7 @@ export const projects: Project[] = [
       "Master your reflexes with the ultimate Stroop Effect brain training game — where the color of text and its meaning conflict to challenge your mental agility and reaction speed.",
     category: ["web", "mobile"],
     tags: ["Web App", "iOS", "Android", "Gaming"],
-    url: "https://play.google.com/store/apps/details?id=com.brilworks.colorcommand",
+    url: "https://color-command-brain-game-uxyz.vercel.app/",
     imageUrl: "/images/colorcommand.png",
     iosUrl:
       "https://apps.apple.com/in/app/color-command-brain-training/id6767218237",
