@@ -22,6 +22,17 @@ export function inCategory(project: Project, cat: Category): boolean {
 export const projects: Project[] = [
   // ─── Browser Extensions ───────────────────────────────────────────────────
   {
+    id: "cyberbricks",
+    title: "Cyber-Bricks: Neon Arcade",
+    subtitle: "Premium Retro-Synthwave Brick Breaker Game",
+    description:
+      "Play a premium retro-synthwave brick breaker directly from your browser toolbar — no new tab needed. Features canvas physics, particle effects, five tactical power-ups (Multi-Ball, Laser Paddle, Barrier Shield, and more), and a programmatic Web Audio synthesizer. Free, lightweight, and fully offline-compatible.",
+    category: "extension",
+    tags: ["Chrome Extension", "Gaming"],
+    url: "https://cyber-bricks.brilworks.com/",
+    imageUrl: "/images/cyberbricks.png",
+  },
+  {
     id: "whatstack",
     title: "WhatStack",
     subtitle: "Website Tech Stack Detector",
